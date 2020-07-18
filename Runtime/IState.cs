@@ -1,4 +1,4 @@
-namespace Fack {
+namespace Dispatch {
 	public delegate void StateChangeEvent();
 
 	public interface IState {
