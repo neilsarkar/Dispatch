@@ -4,7 +4,6 @@ public class BaseView : ReleasedMonoBehaviour, IView<UIState> {
 	UIState state;
 	public UIState State => state != null ? state : state = UIState.Singleton;
 
-	UIState lastState;
 	public void OnEnable() {
 		State.OnChange += State_OnChange;
 		OnShow();
