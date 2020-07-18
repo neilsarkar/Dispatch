@@ -5,7 +5,7 @@ namespace Dispatch {
 		TState state;
 		TState prev;
 
-		public Dispatcher(TState state, TState prev) {
+		public Dispatcher(TState state, TState prev = default) {
 			this.state = state;
 			this.prev = prev;
 		}

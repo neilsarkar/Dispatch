@@ -26,10 +26,11 @@ public static class MyActions {
 }
 
 var state = new MyState();
-var dispatcher = new Dispatcher<MyState>();
 state.OnChange += () => {
 	print($"state changed!");
 }
+
+var dispatcher = new Dispatcher<MyState>(state);
 dispatcher.Run(MyActions.IncrementCool);
 dispatcher.Run(MyActions.SetGreat(new List<int>()));
 ```
