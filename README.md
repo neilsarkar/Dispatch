@@ -24,4 +24,12 @@ public static class MyActions {
 		state.Great = great;
 	}
 }
+
+var state = new MyState();
+var dispatcher = new Dispatcher<MyState>();
+state.OnChange += () => {
+	print($"state changed!");
+}
+dispatcher.Run(MyActions.IncrementCool);
+dispatcher.Run(MyActions.SetGreat(new List<int>()));
 ```
